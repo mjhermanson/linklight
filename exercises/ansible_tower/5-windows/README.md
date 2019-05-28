@@ -38,7 +38,7 @@ Click SAVE ![Save button](at_save.png) and then select ADD SURVEY ![Add](at_adds
 
 Complete the survey form with following values
 
-PROMPT|Enter the hostname of the server you would like to install on
+PROMPT|Target hostname
 ------|------------------------------------------------
 DESCRIPTION|hostname of server
 ANSWER VARIABLE NAME|limit
@@ -46,7 +46,7 @@ ANSWER TYPE|Text
 MINIMUM/MAXIMUM LENGTH| Use the defaults
 DEFAULT ANSWER| windows
 
-![Survey Form](at_survey_detail.png)
+<!-- ![Survey Form](at_survey_detail.png) -->
 
 
 ### Step 6:
