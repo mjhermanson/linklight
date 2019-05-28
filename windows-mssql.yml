@@ -1,5 +1,5 @@
 ---
-- hosts: Windows
+- hosts: windows
   name: This is my role-based playbook
 
   roles:
