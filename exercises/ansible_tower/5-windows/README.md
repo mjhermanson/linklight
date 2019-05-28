@@ -84,7 +84,7 @@ Click on the rocketship icon ![Launch button](at_launch_icon.png) for the *Insta
 
 ### Step 3:
 
-When prompted, enter your desired test message
+When prompted, enter the hostname of your windows instance.
 
 <!-- ![Survey Prompt](at_survey_prompt.png) -->
 
