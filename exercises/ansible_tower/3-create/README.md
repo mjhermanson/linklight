@@ -113,7 +113,7 @@ To the right, you can view standard output; the same way you could if you were r
 Once your job is sucessful, navigate to your new website
 
 ```bash
-http://<IP_of_any_node>
+http://<IP_of_any_linux_node>
 ```
 
 If all went well, you should see something like this, but with your own custom message:
