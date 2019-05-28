@@ -1,6 +1,0 @@
----
-- hosts: Windows
-  name: This is my role-based playbook
-
-  roles:
-    - mssql
