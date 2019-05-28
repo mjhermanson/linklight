@@ -80,45 +80,25 @@ Alternatively, if you haven't navigated away from the job templates creation pag
 
 ### Step 2:
 
-Click on the rocketship icon ![Launch button](at_launch_icon.png) for the *Apache Basic Job Template*
+Click on the rocketship icon ![Launch button](at_launch_icon.png) for the *Install MSSQL on Windows*
 
 ### Step 3:
 
 When prompted, enter your desired test message
 
-![Survey Prompt](at_survey_prompt.png)
+<!-- ![Survey Prompt](at_survey_prompt.png) -->
 
 ### Step 4:
 
-Select LAUNCH ![Survey launch button](at_survey_launch.png)
+Select LAUNCH <!-- ![Survey launch button](at_survey_launch.png) -->
 
 ### Step 5:
 
 Sit back, watch the magic happen!
 
-One of the first things you will notice is the summary section.  This gives you details about your job such as who launched it, what playbook it's running, what the status is, i.e. pending, running, or complete.
+This job will execute the tasks in the MSSQL role in the project. This will go through the installation of MSSQL Developer Edition 2017. 
 
-![Job Summary](at_job_status.png)
-
-Scrolling down, you will be able to see details on the play and each task in the playbook.
-
-![Play and Task Details](at_job_tasklist.png)
-
-To the right, you can view standard output; the same way you could if you were running Ansible Core from the command line.
-
-![Job Standard Output](at_job_stdout.png)
-
-### Step 6:
-
-Once your job is sucessful, navigate to your new website
-
-```bash
-http://<IP_of_any_node>
-```
-
-If all went well, you should see something like this, but with your own custom message:
-
-![New Website with Personalized Test Message](at_web_tm.png)
+You can use the variables in this role to manage the configuration lifecycle of the database in the same manner os the code. For example, if you are introducing a code change that will require more resources on the database, you can make that change in git repo and let ansible role out the changes. 
 
 
 ## End Result
