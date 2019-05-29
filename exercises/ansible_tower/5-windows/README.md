@@ -51,7 +51,7 @@ Complete the survey form with following values
 PROMPT|Target hostname
 ------|------------------------------------------------
 DESCRIPTION|hostname of server
-ANSWER VARIABLE NAME|limit
+ANSWER VARIABLE NAME|hosts
 ANSWER TYPE|Text
 MINIMUM/MAXIMUM LENGTH| Use the defaults
 DEFAULT ANSWER| windows
