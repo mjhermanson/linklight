@@ -177,7 +177,7 @@
 #    # SourceCredential_password: "{{ ansible_password }}"
 
     # System Admins 
-    SQLSysAdminAccounts: "@Administrators"
+    SQLSysAdminAccounts: BUILTIN\Administrators
     # Analysis Services Admins (if installed)
     # ASSysAdminAccounts: "{{ mssql_asadmin_accounts }}"
   tags: install_sql
