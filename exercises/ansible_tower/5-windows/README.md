@@ -94,7 +94,7 @@ Click on the rocketship icon ![Launch button](at_launch_icon.png) for the *Insta
 
 ### Step 3:
 
-When prompted, enter the hostname of your windows instance. You can leave the default 'windows' as that will apply to every node in the windows group. In our case it's only one, but in practice this could be several.
+When prompted you can either change the value or simply accept the defaults. 
 
 <!-- ![Survey Prompt](at_survey_prompt.png) -->
 
