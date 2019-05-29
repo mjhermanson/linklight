@@ -1,7 +1,14 @@
-# Exercise 3 - Creating and Running a Job Template
+# Extras - Install MSSQL on Windows
 
-A job template is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times.
+Create a Job Template for a MSQL installation. Add a survey that asks for the hostname of the server you wish to deploy on. 
 
+## Import Windows inventory
+
+An instance of Windows has been provisioned for you to install MSSQL on. Import the inventory file ~/studentXX-windows.txt using tower-manage as in previous labs.
+
+## Create a Machine Credential for Windows
+
+AWS creates random passwords for the Administrator account. We need to create a credential for your instance's Adminstrator account with the generated password. Grab the password from your inventory file and create a credential like you did in previous labs.
 
 ## Creating a Job Template
 
@@ -23,7 +30,7 @@ DESCRIPTION|Template for the windows playbook
 JOB TYPE|Run
 INVENTORY|Ansible Workshop Inventory
 PROJECT|Ansible Workshop Project
-PLAYBOOK|exercises/windows-mssql.yml
+PLAYBOOK|windows-mssql.yml
 MACHINE CREDENTIAL|Ansible Windows Credential
 LIMIT|windows
 OPTIONS|- [x] Enable Privilege Escalation
@@ -84,7 +91,7 @@ Click on the rocketship icon ![Launch button](at_launch_icon.png) for the *Insta
 
 ### Step 3:
 
-When prompted, enter the hostname of your windows instance.
+When prompted, enter the hostname of your windows instance. You can leave the default 'windows' as that will apply to every node in the windows group. In our case it's only one, but in practice this could be several.
 
 <!-- ![Survey Prompt](at_survey_prompt.png) -->
 
@@ -97,6 +104,8 @@ Select LAUNCH <!-- ![Survey launch button](at_survey_launch.png) -->
 Sit back, watch the magic happen!
 
 This job will execute the tasks in the MSSQL role in the project. This will go through the installation of MSSQL Developer Edition 2017. 
+
+You can explore the role in depth here: https://github.com/mjhermanson/linklight/tree/master/roles/mssql
 
 You can use the variables in this role to manage the configuration lifecycle of the database in the same manner os the code. For example, if you are introducing a code change that will require more resources on the database, you can make that change in git repo and let ansible role out the changes. 
 
