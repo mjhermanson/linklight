@@ -6,6 +6,10 @@ Create a Job Template for a MSQL installation. Add a survey that asks for the ho
 
 An instance of Windows has been provisioned for you to install MSSQL on. Import the inventory file ~/studentXX-windows.txt using tower-manage as in previous labs.
 
+```
+sudo tower-manage inventory_import --source=<location of you inventory> --inventory-name="Ansible Workshop Inventory"
+```
+
 ## Create a Machine Credential for Windows
 
 AWS creates random passwords for the Administrator account. We need to create a credential for your instance's Adminstrator account with the generated password. Grab the password from your inventory file and create a credential like you did in previous labs.
@@ -33,7 +37,6 @@ PROJECT|Ansible Workshop Project
 PLAYBOOK|windows-mssql.yml
 MACHINE CREDENTIAL|Ansible Windows Credential
 LIMIT|windows
-OPTIONS|- [x] Enable Privilege Escalation
 
 <!--![Job Template Form](at_jt_detail.png) -->
 
