@@ -1,4 +1,4 @@
-kkolk.mssql
+mssql
 =========
 Description
 -----------
