@@ -1,6 +1,6 @@
 # Extras - Install MSSQL on Windows
 
-Create a Job Template for a MSQL installation. Add a survey that asks for the hostname of the server you wish to deploy on. 
+Create a Job Template for a MSQL installation. Add a survey that prompts if you want to override the default memory limit for the server(s) you wish to deploy on. 
 
 ## Import Windows inventory
 
@@ -48,13 +48,13 @@ Click SAVE ![Save button](at_save.png) and then select ADD SURVEY ![Add](at_adds
 
 Complete the survey form with following values
 
-PROMPT|Target hostname
+PROMPT|Max Memory Limit
 ------|------------------------------------------------
-DESCRIPTION|hostname of server
-ANSWER VARIABLE NAME|hosts
+DESCRIPTION| maximum memory limit for sql
+ANSWER VARIABLE NAME|mssql_max_server_memory
 ANSWER TYPE|Text
 MINIMUM/MAXIMUM LENGTH| Use the defaults
-DEFAULT ANSWER| windows
+DEFAULT ANSWER| 1024
 
 <!-- ![Survey Form](at_survey_detail.png) -->
 
