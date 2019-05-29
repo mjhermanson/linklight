@@ -52,6 +52,11 @@
     state: present
     include_sub_features: True
 
+- name: Create directory structure
+  win_file:
+    path: C:\temp\
+    state: directory
+
 # Setup service accounts
 #
 # We delegate this process to our domain controller since the required AD services are there for
@@ -150,7 +155,7 @@
     SQLCollation: "{{ mssql_collation }}"
     BrowserSvcStartupType: "{{ mssql_browsersvc_mode }}"
     SuppressReboot: "{{ mssql_suppress_reboot }}"
-    # Service Accounts
+    # Service 0Accounts
     #
     # If the type of the DSC resource option is a PSCredential then 
     # there needs to be 2 options set in the Ansible task definition 
@@ -158,21 +163,21 @@
     # two options for these normally single option items.
 
     #    # SQL Service Account
-    #    SQLSvcAccount_username: "{{ mssql_sqlsvc_account }}"
-    #    SQLSvcAccount_password: "{{ mssql_sqlsvc_account_pass }}"
+        SQLSvcAccount_username: "{{ mssql_sqlsvc_account }}"
+        SQLSvcAccount_password: "{{ mssql_sqlsvc_account_pass }}"
     #    # SQL Agent Service Account
-    #    AgtSvcAccount_username: "{{ mssql_agentsvc_account }}"
-    #    AgtSvcAccount_password: "{{ mssql_agentsvc_account_pass }}"
+        AgtSvcAccount_username: "{{ mssql_agentsvc_account }}"
+        AgtSvcAccount_password: "{{ mssql_agentsvc_account_pass }}"
     #    # SQL Analysis Services Account
-    #    ASSvcAccount_username: "{{ mssql_assvc_account }}"
-    #    ASSvcAccount_password: "{{ mssql_assvc_account_pass }}"
+        ASSvcAccount_username: "{{ mssql_assvc_account }}"
+        ASSvcAccount_password: "{{ mssql_assvc_account_pass }}"
     #
     # Used when installing on a network path, comment out 
     # SourceCredential_username: "{{ ansible_user }}"
     # SourceCredential_password: "{{ ansible_password }}"
 
     # System Admins 
-    #    SQLSysAdminAccounts: "{{ mssql_sysadmin_accounts }}"
+        SQLSysAdminAccounts: "{{ mssql_sysadmin_accounts }}"
     # Analysis Services Admins (if installed)
     # ASSysAdminAccounts: "{{ mssql_asadmin_accounts }}"
   tags: install_sql
