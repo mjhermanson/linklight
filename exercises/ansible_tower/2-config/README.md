@@ -99,7 +99,7 @@ NAME |Ansible Workshop Project
 DESCRIPTION|workshop playbooks
 ORGANIZATION|Default
 SCM TYPE|Git
-SCM URL| https://github.com/mjhermanson/linklight
+SCM URL| https://github.com/ansible/lightbulb
 SCM BRANCH|
 SCM UPDATE OPTIONS| [x] Clean <br />  [x] Delete on Update<br />  [x] Update on Launch
 
