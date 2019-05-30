@@ -10,6 +10,21 @@ An instance of Windows has been provisioned for you to install MSSQL on. Import 
 sudo tower-manage inventory_import --source=<location of you inventory> --inventory-name="Ansible Workshop Inventory"
 ```
 
+## Create a project for MSSQL playbooks
+
+Complete the form using the following entries
+
+NAME |Ansible MSSQL Workshop Project
+-----|------------------------
+DESCRIPTION|MSSQL playbooks
+ORGANIZATION|Default
+SCM TYPE|Git
+SCM URL| https://github.com/mjhermanson/linklight
+SCM BRANCH|master
+SCM UPDATE OPTIONS| [x] Clean <br />  [x] Delete on Update<br />  [x] Update on Launch
+
+
+
 ## Create a Machine Credential for Windows
 
 AWS creates random passwords for the Administrator account. We need to create a credential for your instance's Adminstrator account with the generated password. Grab the password from your inventory file and create a credential like you did in previous labs.
