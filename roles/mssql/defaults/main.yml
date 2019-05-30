@@ -18,7 +18,7 @@ mssql_port: 1433
 # values must be divisible by 512
 
 # Max memory to allocate to this instance
-mssql_max_server_memory: 1024
+mssql_max_server_memory: 1026
 
 # Memory to reserve to the OS
 mssql_os_memory_reservation: 513
