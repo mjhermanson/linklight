@@ -4,19 +4,19 @@ Create a Job Template for a MSQL installation. Add a survey that prompts if you 
 
 ## Import Windows inventory
 
-An instance of Windows has been provisioned for you to install MSSQL on. Import the inventory file ~/studentXX-windows.txt using tower-manage as in previous labs.
+An instance of Windows has been provisioned for you to install MSSQL on. Create an empty inventory called "Windows" in Tower's interface. Import the inventory file ~/studentXX-windows.txt using tower-manage as in previous labs.
 
 ```
-sudo tower-manage inventory_import --source=<location of you inventory> --inventory-name="Ansible Workshop Inventory"
+sudo tower-manage inventory_import --source=<location of you inventory> --inventory-name="Windows"
 ```
 
 ## Create a project for MSSQL playbooks
 
 Complete the form using the following entries
 
-NAME |Ansible MSSQL Workshop Project
+NAME |windows MSSQL Project
 -----|------------------------
-DESCRIPTION|MSSQL playbooks
+DESCRIPTION|Windows MSSQL playbooks
 ORGANIZATION|Default
 SCM TYPE|Git
 SCM URL| https://github.com/mjhermanson/linklight
@@ -47,8 +47,8 @@ NAME | Install MSSQL on Windows
 -----|-------------------------
 DESCRIPTION|Template for the windows playbook
 JOB TYPE|Run
-INVENTORY|Ansible Workshop Inventory
-PROJECT|Ansible Workshop Project
+INVENTORY|Windows
+PROJECT|Windows MSSQL Project
 PLAYBOOK|windows-mssql.yml
 MACHINE CREDENTIAL|Ansible Windows Credential
 LIMIT|windows
